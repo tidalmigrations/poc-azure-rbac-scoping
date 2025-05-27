@@ -1,0 +1,28 @@
+# Plans directory (keeping implementation plan private for now)
+/plans/
+
+# Environment files containing credentials
+.env
+.env.*
+*.env
+
+# Terraform files
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+.terraform/
+.terraform.lock.hcl
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
