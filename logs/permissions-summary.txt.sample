@@ -1,0 +1,38 @@
+# Azure RBAC POC - Permissions Analysis Summary
+Generated: Mon Jan 15 10:15:43 EST 2025
+Analysis Period: 2025-01-15T10:00:00Z to 2025-01-15T10:05:41Z
+Service Principal: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+## Overview
+- Total Unique Operations: 12
+- Unique Resource Providers: 1
+- Unique Resource Types: 5
+
+## Top Operations by Frequency
+- Microsoft.Storage/storageAccounts/listKeys/action (4 times)
+- Microsoft.Authorization/policies/audit/action (4 times)
+- Microsoft.Web/sites/config/write (2 times)
+- Microsoft.Web/sites/write (1 times)
+- Microsoft.Web/serverFarms/write (1 times)
+- Microsoft.Storage/storageAccounts/write (1 times)
+- Microsoft.Resources/subscriptions/resourcegroups/write (1 times)
+- Microsoft.Insights/components/write (1 times)
+- Microsoft.Insights/components/currentbillingfeatures/write (1 times)
+- Microsoft.DBforPostgreSQL/flexibleServers/write (1 times)
+- Microsoft.DBforPostgreSQL/flexibleServers/firewallRules/write (1 times)
+- Microsoft.DBforPostgreSQL/flexibleServers/databases/write (1 times)
+
+## Resource Providers Used
+- rg-demo-app-abc123
+
+## Recommended Actions for Phase 4
+1. Review the operations list to identify essential vs. optional permissions
+2. Group permissions by resource provider for custom role creation
+3. Consider resource-specific scopes to further limit access
+4. Test minimal permission set with a subset of operations
+
+## Files Generated
+- Activity Logs: /path/to/project/logs/activity-logs-sample.json
+- Permissions Analysis: /path/to/project/logs/permissions-analysis-sample.json
+- CSV Export: /path/to/project/logs/permissions-sample.csv
+- This Summary: /path/to/project/logs/permissions-summary-sample.txt 

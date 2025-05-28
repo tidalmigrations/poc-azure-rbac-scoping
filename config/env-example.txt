@@ -1,0 +1,33 @@
+# Azure RBAC POC - Environment Configuration Example
+# Copy this content to .env or .env.terraform in the project root and fill in your values
+
+# Option 1: Terraform ARM_* Variables (recommended for Terraform workflows)
+export ARM_SUBSCRIPTION_ID="your-subscription-id-here"
+export ARM_TENANT_ID="your-tenant-id-here"
+export ARM_CLIENT_ID="your-service-principal-id-here"
+export ARM_CLIENT_SECRET="your-service-principal-secret-here"
+
+# Option 2: AZURE_* Variables (alternative naming)
+# AZURE_SUBSCRIPTION_ID="your-subscription-id-here"
+# AZURE_TENANT_ID="your-tenant-id-here"
+# SERVICE_PRINCIPAL_ID="your-service-principal-id-here"
+# SERVICE_PRINCIPAL_SECRET="your-service-principal-secret-here"
+
+# Note: Scripts automatically map ARM_* variables to AZURE_* variables
+# You can use either naming convention or mix them as needed
+
+# Optional: Log Analytics Workspace (from Phase 2)
+# LOG_ANALYTICS_WORKSPACE_ID="your-log-analytics-workspace-id-here"
+
+# Optional: Resource Group and Location
+# AZURE_RESOURCE_GROUP="rg-azure-rbac-poc"
+# AZURE_LOCATION="East US"
+
+# Optional: Terraform Backend Configuration
+# ARM_RESOURCE_GROUP_NAME="your-terraform-rg"
+# ARM_STORAGE_ACCOUNT_NAME="your-terraform-storage-account"
+# ARM_CONTAINER_NAME="terraform-state"
+
+# Optional: Cost Management
+# AZURE_COST_CENTER="your-cost-center"
+# AZURE_ENVIRONMENT="poc" 

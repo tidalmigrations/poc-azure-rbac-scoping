@@ -1,0 +1,13 @@
+Operation,Count,Resource Provider,Resource Type,First Seen,Last Seen
+"Microsoft.Authorization/policies/audit/action",4,"rg-demo-app-abc123","Microsoft.Web","2025-01-15T10:00:21.6508387Z","2025-01-15T10:04:39.3625715Z"
+"Microsoft.DBforPostgreSQL/flexibleServers/databases/write",1,"rg-demo-app-abc123","Microsoft.DBforPostgreSQL","2025-01-15T10:04:38.1049847Z","2025-01-15T10:04:38.1049847Z"
+"Microsoft.DBforPostgreSQL/flexibleServers/firewallRules/write",1,"rg-demo-app-abc123","Microsoft.DBforPostgreSQL","2025-01-15T10:05:40.1718944Z","2025-01-15T10:05:40.1718944Z"
+"Microsoft.DBforPostgreSQL/flexibleServers/write",1,"rg-demo-app-abc123","Microsoft.DBforPostgreSQL","2025-01-15T10:04:26.8723197Z","2025-01-15T10:04:26.8723197Z"
+"Microsoft.Insights/components/currentbillingfeatures/write",1,"rg-demo-app-abc123","Microsoft.Insights","2025-01-15T10:01:02.2200426Z","2025-01-15T10:01:02.2200426Z"
+"Microsoft.Insights/components/write",1,"rg-demo-app-abc123","Microsoft.Insights","2025-01-15T10:00:32.4085189Z","2025-01-15T10:00:32.4085189Z"
+"Microsoft.Resources/subscriptions/resourcegroups/write",1,"rg-demo-app-abc123","Unknown","2025-01-15T10:00:12.8613717Z","2025-01-15T10:00:12.8613717Z"
+"Microsoft.Storage/storageAccounts/listKeys/action",4,"rg-demo-app-abc123","Microsoft.Storage","2025-01-15T10:00:43.4338621Z","2025-01-15T10:01:26.0509824Z"
+"Microsoft.Storage/storageAccounts/write",1,"rg-demo-app-abc123","Microsoft.Storage","2025-01-15T10:00:44.4227292Z","2025-01-15T10:00:44.4227292Z"
+"Microsoft.Web/serverFarms/write",1,"rg-demo-app-abc123","Microsoft.Web","2025-01-15T10:00:28.6550372Z","2025-01-15T10:00:28.6550372Z"
+"Microsoft.Web/sites/config/write",2,"rg-demo-app-abc123","Microsoft.Web","2025-01-15T10:05:24.0169209Z","2025-01-15T10:05:25.0025144Z"
+"Microsoft.Web/sites/write",1,"rg-demo-app-abc123","Microsoft.Web","2025-01-15T10:05:12.6311243Z","2025-01-15T10:05:12.6311243Z" 

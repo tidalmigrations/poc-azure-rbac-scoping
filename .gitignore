@@ -18,6 +18,9 @@ config/*.json
 !*.tfvars.example
 .terraform/
 .terraform.lock.hcl
+tfplan
+*.tfplan
+plan.out
 
 # IDE files
 .vscode/
@@ -31,3 +34,9 @@ Thumbs.db
 
 # Logs
 *.log
+/logs/activity-logs-*.json
+/logs/permissions-*.csv
+/logs/permissions-analysis-*.json
+/logs/permissions-summary-*.txt
+/logs/minimal-role-template-*.json
+/logs/current-permissions.txt

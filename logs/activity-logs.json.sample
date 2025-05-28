@@ -1,0 +1,244 @@
+[
+  {
+    "authorization": {
+      "action": "Microsoft.DBforPostgreSQL/flexibleServers/firewallRules/write",
+      "scope": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.DBforPostgreSQL/flexibleServers/psql-demo-abc123/firewallRules/AllowAzureServices"
+    },
+    "caller": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "category": {
+      "localizedValue": "Administrative",
+      "value": "Administrative"
+    },
+    "claims": {
+      "aio": "**REDACTED**",
+      "appid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "appidacr": "1",
+      "aud": "https://management.azure.com",
+      "exp": "1748456109",
+      "http://schemas.microsoft.com/identity/claims/identityprovider": "https://sts.windows.net/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/",
+      "http://schemas.microsoft.com/identity/claims/objectidentifier": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "http://schemas.microsoft.com/identity/claims/tenantid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "iat": "1748452209",
+      "idtyp": "app",
+      "iss": "https://sts.windows.net/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/",
+      "nbf": "1748452209",
+      "rh": "**REDACTED**",
+      "uti": "**REDACTED**",
+      "ver": "1.0",
+      "xms_ftd": "**REDACTED**",
+      "xms_idrel": "26 7",
+      "xms_rd": "**REDACTED**",
+      "xms_tcdt": "1482174446"
+    },
+    "correlationId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "description": "",
+    "eventDataId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "eventName": {
+      "localizedValue": "End request",
+      "value": "EndRequest"
+    },
+    "eventTimestamp": "2025-01-15T10:05:40.1718944Z",
+    "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.DBforPostgreSQL/flexibleServers/psql-demo-abc123/firewallRules/AllowAzureServices/events/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/ticks/638840496401718944",
+    "level": "Informational",
+    "operationId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "operationName": {
+      "localizedValue": "Create/Update Firewall Rule",
+      "value": "Microsoft.DBforPostgreSQL/flexibleServers/firewallRules/write"
+    },
+    "properties": {
+      "entity": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.DBforPostgreSQL/flexibleServers/psql-demo-abc123/firewallRules/AllowAzureServices",
+      "eventCategory": "Administrative",
+      "hierarchy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "message": "Microsoft.DBforPostgreSQL/flexibleServers/firewallRules/write"
+    },
+    "resourceGroup": "rg-demo-app-abc123",
+    "resourceGroupName": "rg-demo-app-abc123",
+    "resourceId": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.DBforPostgreSQL/flexibleServers/psql-demo-abc123/firewallRules/AllowAzureServices",
+    "resourceProviderName": {
+      "localizedValue": "Microsoft.DBforPostgreSQL",
+      "value": "Microsoft.DBforPostgreSQL"
+    },
+    "resourceType": {
+      "localizedValue": "Microsoft.DBforPostgreSQL/flexibleServers/firewallRules",
+      "value": "Microsoft.DBforPostgreSQL/flexibleServers/firewallRules"
+    },
+    "status": {
+      "localizedValue": "Succeeded",
+      "value": "Succeeded"
+    },
+    "subStatus": {
+      "localizedValue": "",
+      "value": ""
+    },
+    "submissionTimestamp": "2025-01-15T10:11:42Z",
+    "subscriptionId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "tenantId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  },
+  {
+    "authorization": {
+      "action": "Microsoft.Web/sites/config/write",
+      "scope": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.Web/sites/app-demo-abc123/config/azurestorageaccounts"
+    },
+    "caller": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "category": {
+      "localizedValue": "Administrative",
+      "value": "Administrative"
+    },
+    "claims": {
+      "aio": "**REDACTED**",
+      "appid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "appidacr": "1",
+      "aud": "https://management.azure.com",
+      "exp": "1748456109",
+      "http://schemas.microsoft.com/identity/claims/identityprovider": "https://sts.windows.net/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/",
+      "http://schemas.microsoft.com/identity/claims/objectidentifier": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "http://schemas.microsoft.com/identity/claims/tenantid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "iat": "1748452209",
+      "idtyp": "app",
+      "iss": "https://sts.windows.net/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/",
+      "nbf": "1748452209",
+      "rh": "**REDACTED**",
+      "uti": "**REDACTED**",
+      "ver": "1.0",
+      "xms_ftd": "**REDACTED**",
+      "xms_idrel": "26 7",
+      "xms_rd": "**REDACTED**",
+      "xms_tcdt": "1482174446"
+    },
+    "correlationId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "description": "",
+    "eventDataId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "eventName": {
+      "localizedValue": "End request",
+      "value": "EndRequest"
+    },
+    "eventTimestamp": "2025-01-15T10:05:25.0025144Z",
+    "httpRequest": {
+      "clientIpAddress": "xxx.xxx.xxx.xxx",
+      "clientRequestId": "",
+      "method": "PUT",
+      "uri": "https://management.azure.com/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.Web/sites/app-demo-abc123/config/azurestorageaccounts?api-version=2023-01-01"
+    },
+    "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.Web/sites/app-demo-abc123/config/azurestorageaccounts/events/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/ticks/638840496250025144",
+    "level": "Informational",
+    "operationId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "operationName": {
+      "localizedValue": "Update web sites config",
+      "value": "Microsoft.Web/sites/config/write"
+    },
+    "properties": {
+      "entity": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.Web/sites/app-demo-abc123/config/azurestorageaccounts",
+      "eventCategory": "Administrative",
+      "hierarchy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "message": "Microsoft.Web/sites/config/write",
+      "statusCode": "OK"
+    },
+    "resourceGroup": "rg-demo-app-abc123",
+    "resourceGroupName": "rg-demo-app-abc123",
+    "resourceId": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.Web/sites/app-demo-abc123/config/azurestorageaccounts",
+    "resourceProviderName": {
+      "localizedValue": "Azure Web Sites",
+      "value": "Microsoft.Web"
+    },
+    "resourceType": {
+      "localizedValue": "Microsoft.Web/sites/config",
+      "value": "Microsoft.Web/sites/config"
+    },
+    "status": {
+      "localizedValue": "Succeeded",
+      "value": "Succeeded"
+    },
+    "subStatus": {
+      "localizedValue": "OK (HTTP Status Code: 200)",
+      "value": "OK"
+    },
+    "submissionTimestamp": "2025-01-15T10:07:13Z",
+    "subscriptionId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "tenantId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  },
+  {
+    "authorization": {
+      "action": "Microsoft.Storage/storageAccounts/listKeys/action",
+      "scope": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.Storage/storageAccounts/stabc123demo"
+    },
+    "caller": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "category": {
+      "localizedValue": "Administrative",
+      "value": "Administrative"
+    },
+    "claims": {
+      "aio": "**REDACTED**",
+      "appid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "appidacr": "1",
+      "aud": "https://management.azure.com",
+      "exp": "1748456109",
+      "http://schemas.microsoft.com/identity/claims/identityprovider": "https://sts.windows.net/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/",
+      "http://schemas.microsoft.com/identity/claims/objectidentifier": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "http://schemas.microsoft.com/identity/claims/tenantid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "iat": "1748452209",
+      "idtyp": "app",
+      "iss": "https://sts.windows.net/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/",
+      "nbf": "1748452209",
+      "rh": "**REDACTED**",
+      "uti": "**REDACTED**",
+      "ver": "1.0",
+      "xms_ftd": "**REDACTED**",
+      "xms_idrel": "26 7",
+      "xms_rd": "**REDACTED**",
+      "xms_tcdt": "1482174446"
+    },
+    "correlationId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "description": "",
+    "eventDataId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "eventName": {
+      "localizedValue": "End request",
+      "value": "EndRequest"
+    },
+    "eventTimestamp": "2025-01-15T10:00:43.4338621Z",
+    "httpRequest": {
+      "clientIpAddress": "xxx.xxx.xxx.xxx",
+      "clientRequestId": "",
+      "method": "POST",
+      "uri": "https://management.azure.com/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.Storage/storageAccounts/stabc123demo/listKeys?api-version=2023-01-01"
+    },
+    "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.Storage/storageAccounts/stabc123demo/events/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/ticks/638840491434338621",
+    "level": "Informational",
+    "operationId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "operationName": {
+      "localizedValue": "List Storage Account Keys",
+      "value": "Microsoft.Storage/storageAccounts/listKeys/action"
+    },
+    "properties": {
+      "entity": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.Storage/storageAccounts/stabc123demo",
+      "eventCategory": "Administrative",
+      "hierarchy": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      "message": "Microsoft.Storage/storageAccounts/listKeys/action",
+      "statusCode": "OK"
+    },
+    "resourceGroup": "rg-demo-app-abc123",
+    "resourceGroupName": "rg-demo-app-abc123",
+    "resourceId": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.Storage/storageAccounts/stabc123demo",
+    "resourceProviderName": {
+      "localizedValue": "Microsoft Storage",
+      "value": "Microsoft.Storage"
+    },
+    "resourceType": {
+      "localizedValue": "Microsoft.Storage/storageAccounts",
+      "value": "Microsoft.Storage/storageAccounts"
+    },
+    "status": {
+      "localizedValue": "Succeeded",
+      "value": "Succeeded"
+    },
+    "subStatus": {
+      "localizedValue": "OK (HTTP Status Code: 200)",
+      "value": "OK"
+    },
+    "submissionTimestamp": "2025-01-15T10:06:13Z",
+    "subscriptionId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "tenantId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  }
+] 

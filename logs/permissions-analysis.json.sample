@@ -1,0 +1,98 @@
+[
+  {
+    "operation": "Microsoft.Authorization/policies/audit/action",
+    "count": 4,
+    "resourceProvider": "rg-demo-app-abc123",
+    "resourceType": "Microsoft.Web",
+    "firstSeen": "2025-01-15T10:00:21.6508387Z",
+    "lastSeen": "2025-01-15T10:04:39.3625715Z"
+  },
+  {
+    "operation": "Microsoft.DBforPostgreSQL/flexibleServers/databases/write",
+    "count": 1,
+    "resourceProvider": "rg-demo-app-abc123",
+    "resourceType": "Microsoft.DBforPostgreSQL",
+    "firstSeen": "2025-01-15T10:04:38.1049847Z",
+    "lastSeen": "2025-01-15T10:04:38.1049847Z"
+  },
+  {
+    "operation": "Microsoft.DBforPostgreSQL/flexibleServers/firewallRules/write",
+    "count": 1,
+    "resourceProvider": "rg-demo-app-abc123",
+    "resourceType": "Microsoft.DBforPostgreSQL",
+    "firstSeen": "2025-01-15T10:05:40.1718944Z",
+    "lastSeen": "2025-01-15T10:05:40.1718944Z"
+  },
+  {
+    "operation": "Microsoft.DBforPostgreSQL/flexibleServers/write",
+    "count": 1,
+    "resourceProvider": "rg-demo-app-abc123",
+    "resourceType": "Microsoft.DBforPostgreSQL",
+    "firstSeen": "2025-01-15T10:04:26.8723197Z",
+    "lastSeen": "2025-01-15T10:04:26.8723197Z"
+  },
+  {
+    "operation": "Microsoft.Insights/components/currentbillingfeatures/write",
+    "count": 1,
+    "resourceProvider": "rg-demo-app-abc123",
+    "resourceType": "Microsoft.Insights",
+    "firstSeen": "2025-01-15T10:01:02.2200426Z",
+    "lastSeen": "2025-01-15T10:01:02.2200426Z"
+  },
+  {
+    "operation": "Microsoft.Insights/components/write",
+    "count": 1,
+    "resourceProvider": "rg-demo-app-abc123",
+    "resourceType": "Microsoft.Insights",
+    "firstSeen": "2025-01-15T10:00:32.4085189Z",
+    "lastSeen": "2025-01-15T10:00:32.4085189Z"
+  },
+  {
+    "operation": "Microsoft.Resources/subscriptions/resourcegroups/write",
+    "count": 1,
+    "resourceProvider": "rg-demo-app-abc123",
+    "resourceType": "Unknown",
+    "firstSeen": "2025-01-15T10:00:12.8613717Z",
+    "lastSeen": "2025-01-15T10:00:12.8613717Z"
+  },
+  {
+    "operation": "Microsoft.Storage/storageAccounts/listKeys/action",
+    "count": 4,
+    "resourceProvider": "rg-demo-app-abc123",
+    "resourceType": "Microsoft.Storage",
+    "firstSeen": "2025-01-15T10:00:43.4338621Z",
+    "lastSeen": "2025-01-15T10:01:26.0509824Z"
+  },
+  {
+    "operation": "Microsoft.Storage/storageAccounts/write",
+    "count": 1,
+    "resourceProvider": "rg-demo-app-abc123",
+    "resourceType": "Microsoft.Storage",
+    "firstSeen": "2025-01-15T10:00:44.4227292Z",
+    "lastSeen": "2025-01-15T10:00:44.4227292Z"
+  },
+  {
+    "operation": "Microsoft.Web/serverFarms/write",
+    "count": 1,
+    "resourceProvider": "rg-demo-app-abc123",
+    "resourceType": "Microsoft.Web",
+    "firstSeen": "2025-01-15T10:00:28.6550372Z",
+    "lastSeen": "2025-01-15T10:00:28.6550372Z"
+  },
+  {
+    "operation": "Microsoft.Web/sites/config/write",
+    "count": 2,
+    "resourceProvider": "rg-demo-app-abc123",
+    "resourceType": "Microsoft.Web",
+    "firstSeen": "2025-01-15T10:05:24.0169209Z",
+    "lastSeen": "2025-01-15T10:05:25.0025144Z"
+  },
+  {
+    "operation": "Microsoft.Web/sites/write",
+    "count": 1,
+    "resourceProvider": "rg-demo-app-abc123",
+    "resourceType": "Microsoft.Web",
+    "firstSeen": "2025-01-15T10:05:12.6311243Z",
+    "lastSeen": "2025-01-15T10:05:12.6311243Z"
+  }
+] 

@@ -1,0 +1,229 @@
+[0m[1mrandom_string.suffix: Refreshing state... [id=abc123][0m
+[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+[0m[1mazurerm_resource_group.demo: Refreshing state... [id=/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123][0m
+[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD14eHh4eHh4eC14eHh4LXh4eHgtODA5ZC01ODgxNmFhNTdkYzE7b2JqZWN0SWQ9eHh4eHh4eHgtNWJmZS00YjBjLWE0ZTAtZTgzZDNmMjY3NzIwO3N1YnNjcmlwdGlvbklkPXh4eHh4eHh4LTg1Y2ItNDRjNy05NTI4LTQ5MWQzODQ4ZDM0MTt0ZW5hbnRJZD14eHh4eHh4eC1lZDM4LTRjZjAtODJlNC00OTY5NzVkMzRlMzg=][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy[0m
+
+Terraform will perform the following actions:
+
+[1m  # azurerm_resource_group.demo[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "azurerm_resource_group" "demo" {
+      [31m-[0m[0m id         = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123" [90m-> null[0m[0m
+      [31m-[0m[0m location   = "westus2" [90m-> null[0m[0m
+      [31m-[0m[0m name       = "rg-demo-app-abc123" [90m-> null[0m[0m
+      [31m-[0m[0m tags       = {
+          [31m-[0m[0m "CostCenter"  = "poc-testing"
+          [31m-[0m[0m "Environment" = "POC"
+          [31m-[0m[0m "Owner"       = "sandbox-user"
+          [31m-[0m[0m "Project"     = "Azure-RBAC-Scope-Reduction"
+          [31m-[0m[0m "Purpose"     = "Demo-Application"
+        } [90m-> null[0m[0m
+        [90m# (1 unchanged attribute hidden)[0m[0m
+    }
+
+[1m  # random_string.suffix[0m will be [1m[31mdestroyed[0m
+[0m  [31m-[0m[0m resource "random_string" "suffix" {
+      [31m-[0m[0m id          = "abc123" [90m-> null[0m[0m
+      [31m-[0m[0m length      = 6 [90m-> null[0m[0m
+      [31m-[0m[0m lower       = true [90m-> null[0m[0m
+      [31m-[0m[0m min_lower   = 0 [90m-> null[0m[0m
+      [31m-[0m[0m min_numeric = 0 [90m-> null[0m[0m
+      [31m-[0m[0m min_special = 0 [90m-> null[0m[0m
+      [31m-[0m[0m min_upper   = 0 [90m-> null[0m[0m
+      [31m-[0m[0m number      = true [90m-> null[0m[0m
+      [31m-[0m[0m numeric     = true [90m-> null[0m[0m
+      [31m-[0m[0m result      = "abc123" [90m-> null[0m[0m
+      [31m-[0m[0m special     = false [90m-> null[0m[0m
+      [31m-[0m[0m upper       = false [90m-> null[0m[0m
+    }
+
+[1mPlan:[0m 0 to add, 0 to change, 2 to destroy.
+[0m
+Changes to Outputs:
+  [31m-[0m[0m application_insights_name = "appi-demo-abc123" [90m-> null[0m[0m
+  [31m-[0m[0m deployment_summary        = {
+      [31m-[0m[0m location       = "westus2"
+      [31m-[0m[0m resource_group = "rg-demo-app-abc123"
+      [31m-[0m[0m resources      = {
+          [31m-[0m[0m app_service_plan     = "asp-demo-abc123"
+          [31m-[0m[0m application_insights = "appi-demo-abc123"
+          [31m-[0m[0m key_vault            = "kv-demo-abc123"
+          [31m-[0m[0m postgresql_database  = "demoapp"
+          [31m-[0m[0m postgresql_server    = "psql-demo-abc123"
+          [31m-[0m[0m storage_account      = "stabc123demo"
+          [31m-[0m[0m web_app              = "app-demo-abc123"
+        }
+    } [90m-> null[0m[0m
+  [31m-[0m[0m key_vault_name            = "kv-demo-abc123" [90m-> null[0m[0m
+  [31m-[0m[0m postgresql_database_name  = "demoapp" [90m-> null[0m[0m
+  [31m-[0m[0m postgresql_server_name    = "psql-demo-abc123" [90m-> null[0m[0m
+  [31m-[0m[0m resource_group_id         = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123" [90m-> null[0m[0m
+  [31m-[0m[0m resource_group_name       = "rg-demo-app-abc123" [90m-> null[0m[0m
+  [31m-[0m[0m storage_account_name      = "stabc123demo" [90m-> null[0m[0m
+  [31m-[0m[0m web_app_name              = "app-demo-abc123" [90m-> null[0m[0m
+[0m[1mazurerm_resource_group.demo: Destroying... [id=/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123][0m[0m
+[0m[1mazurerm_resource_group.demo: Still destroying... [id=/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-...xxx/resourceGroups/rg-demo-app-abc123, 00m10s elapsed][0m[0m
+[0m[1mazurerm_resource_group.demo: Still destroying... [id=/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-...xxx/resourceGroups/rg-demo-app-abc123, 00m20s elapsed][0m[0m
+[0m[1mazurerm_resource_group.demo: Destruction complete after 1m51s[0m
+[0m[1mrandom_string.suffix: Destroying... [id=abc123][0m[0m
+[0m[1mrandom_string.suffix: Destruction complete after 0s[0m
+[0m[1m[32m
+Destroy complete! Resources: 2 destroyed.
+[0mDEPLOYMENT_START_TIME=2025-01-15T10:00:00Z
+[0m[1mInitializing the backend...[0m
+[0m[1mInitializing provider plugins...[0m
+- Reusing previous version of hashicorp/random from the dependency lock file
+- Reusing previous version of hashicorp/azurerm from the dependency lock file
+- Using previously-installed hashicorp/azurerm v3.117.1
+- Using previously-installed hashicorp/random v3.7.2
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+
+[0m[1mdata.azurerm_client_config.current: Reading...[0m[0m
+[0m[1mdata.azurerm_client_config.current: Read complete after 0s [id=Y2xpZW50Q29uZmlncy9jbGllbnRJZD14eHh4eHh4eC14eHh4LXh4eHgtODA5ZC01ODgxNmFhNTdkYzE7b2JqZWN0SWQ9eHh4eHh4eHgtNWJmZS00YjBjLWE0ZTAtZTgzZDNmMjY3NzIwO3N1YnNjcmlwdGlvbklkPXh4eHh4eHh4LTg1Y2ItNDRjNy05NTI4LTQ5MWQzODQ4ZDM0MTt0ZW5hbnRJZD14eHh4eHh4eC1lZDM4LTRjZjAtODJlNC00OTY5NzVkMzRlMzg=][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # azurerm_application_insights.demo[0m will be created
+[0m  [32m+[0m[0m resource "azurerm_application_insights" "demo" {
+      [32m+[0m[0m app_id                                = (known after apply)
+      [32m+[0m[0m application_type                      = "web"
+      [32m+[0m[0m connection_string                     = (sensitive value)
+      [32m+[0m[0m daily_data_cap_in_gb                  = (known after apply)
+      [32m+[0m[0m daily_data_cap_notifications_disabled = (known after apply)
+      [32m+[0m[0m disable_ip_masking                    = false
+      [32m+[0m[0m force_customer_storage_for_profiler   = false
+      [32m+[0m[0m id                                    = (known after apply)
+      [32m+[0m[0m instrumentation_key                   = (sensitive value)
+      [32m+[0m[0m internet_ingestion_enabled            = true
+      [32m+[0m[0m internet_query_enabled                = true
+      [32m+[0m[0m local_authentication_disabled         = false
+      [32m+[0m[0m location                              = "westus2"
+      [32m+[0m[0m name                                  = (known after apply)
+      [32m+[0m[0m resource_group_name                   = (known after apply)
+      [32m+[0m[0m retention_in_days                     = 90
+      [32m+[0m[0m sampling_percentage                   = 100
+      [32m+[0m[0m tags                                  = {
+          [32m+[0m[0m "CostCenter"  = "poc-testing"
+          [32m+[0m[0m "Environment" = "POC"
+          [32m+[0m[0m "Owner"       = "sandbox-user"
+          [32m+[0m[0m "Project"     = "Azure-RBAC-Scope-Reduction"
+          [32m+[0m[0m "Purpose"     = "Demo-Application"
+        }
+    }
+
+[1m  # azurerm_key_vault.demo[0m will be created
+[0m  [32m+[0m[0m resource "azurerm_key_vault" "demo" {
+      [32m+[0m[0m access_policy                 = [
+          [32m+[0m[0m {
+              [32m+[0m[0m key_permissions    = [
+                  [32m+[0m[0m "Get",
+                  [32m+[0m[0m "List",
+                  [32m+[0m[0m "Create",
+                  [32m+[0m[0m "Delete",
+                  [32m+[0m[0m "Update",
+                ]
+              [32m+[0m[0m object_id          = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+              [32m+[0m[0m secret_permissions = [
+                  [32m+[0m[0m "Get",
+                  [32m+[0m[0m "List",
+                  [32m+[0m[0m "Set",
+                  [32m+[0m[0m "Delete",
+                  [32m+[0m[0m "Purge",
+                  [32m+[0m[0m "Recover",
+                ]
+              [32m+[0m[0m tenant_id          = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+            },
+        ]
+      [32m+[0m[0m id                            = (known after apply)
+      [32m+[0m[0m location                      = "westus2"
+      [32m+[0m[0m name                          = (known after apply)
+      [32m+[0m[0m public_network_access_enabled = true
+      [32m+[0m[0m resource_group_name           = (known after apply)
+      [32m+[0m[0m sku_name                      = "standard"
+      [32m+[0m[0m soft_delete_retention_days    = 90
+      [32m+[0m[0m tags                          = {
+          [32m+[0m[0m "CostCenter"  = "poc-testing"
+          [32m+[0m[0m "Environment" = "POC"
+          [32m+[0m[0m "Owner"       = "sandbox-user"
+          [32m+[0m[0m "Project"     = "Azure-RBAC-Scope-Reduction"
+          [32m+[0m[0m "Purpose"     = "Demo-Application"
+        }
+      [32m+[0m[0m tenant_id                     = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+      [32m+[0m[0m vault_uri                     = (known after apply)
+
+      [32m+[0m[0m contact (known after apply)
+
+      [32m+[0m[0m network_acls (known after apply)
+    }
+
+[1mPlan:[0m 13 to add, 0 to change, 0 to destroy.
+[0m
+[0m[1mrandom_string.suffix: Creating...[0m[0m
+[0m[1mrandom_string.db_password: Creating...[0m[0m
+[0m[1mrandom_string.suffix: Creation complete after 0s [id=abc123][0m
+[0m[1mrandom_string.db_password: Creation complete after 0s [id=**REDACTED**][0m
+[0m[1mazurerm_resource_group.demo: Creating...[0m[0m
+[0m[1mazurerm_resource_group.demo: Creation complete after 9s [id=/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123][0m
+[0m[1mazurerm_application_insights.demo: Creating...[0m[0m
+[0m[1mazurerm_service_plan.demo: Creating...[0m[0m
+[0m[1mazurerm_key_vault.demo: Creating...[0m[0m
+[0m[1mazurerm_postgresql_flexible_server.demo: Creating...[0m[0m
+[0m[1mazurerm_storage_account.demo: Creating...[0m[0m
+[0m[1mazurerm_postgresql_flexible_server.demo: Still creating... [00m10s elapsed][0m[0m
+[0m[1mazurerm_key_vault.demo: Still creating... [00m10s elapsed][0m[0m
+[0m[1mazurerm_application_insights.demo: Still creating... [00m10s elapsed][0m[0m
+[0m[1mazurerm_service_plan.demo: Still creating... [00m10s elapsed][0m[0m
+[0m[1mazurerm_storage_account.demo: Still creating... [00m10s elapsed][0m[0m
+[0m[1mazurerm_service_plan.demo: Creation complete after 18s [id=/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.Web/serverFarms/asp-demo-abc123][0m
+[0m[1mazurerm_application_insights.demo: Creation complete after 45s [id=/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.Insights/components/appi-demo-abc123][0m
+[0m[1mazurerm_storage_account.demo: Creation complete after 1m6s [id=/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.Storage/storageAccounts/stabc123demo][0m
+[0m[1mazurerm_storage_container.demo: Creating...[0m[0m
+[0m[1mazurerm_storage_container.demo: Creation complete after 1s [id=https://stabc123demo.blob.core.windows.net/uploads][0m
+[0m[1mazurerm_key_vault.demo: Creation complete after 2m39s [id=/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.KeyVault/vaults/kv-demo-abc123][0m
+[0m[1mazurerm_key_vault_secret.demo: Creating...[0m[0m
+[0m[1mazurerm_key_vault_secret.demo: Creation complete after 2s [id=https://kv-demo-abc123.vault.azure.net/secrets/database-password/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx][0m
+[0m[1mazurerm_postgresql_flexible_server.demo: Creation complete after 4m4s [id=/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.DBforPostgreSQL/flexibleServers/psql-demo-abc123][0m
+[0m[1mazurerm_postgresql_flexible_server_database.demo: Creating...[0m[0m
+[0m[1mazurerm_postgresql_flexible_server_firewall_rule.demo: Creating...[0m[0m
+[0m[1mazurerm_postgresql_flexible_server_database.demo: Creation complete after 13s [id=/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.DBforPostgreSQL/flexibleServers/psql-demo-abc123/databases/demoapp][0m
+[0m[1mazurerm_linux_web_app.demo: Creating...[0m[0m
+[0m[1mazurerm_postgresql_flexible_server_firewall_rule.demo: Creation complete after 1m15s [id=/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.DBforPostgreSQL/flexibleServers/psql-demo-abc123/firewallRules/AllowAzureServices][0m
+[0m[1mazurerm_linux_web_app.demo: Creation complete after 1m3s [id=/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123/providers/Microsoft.Web/sites/app-demo-abc123][0m
+[0m[1m[32m
+Apply complete! Resources: 13 added, 0 changed, 0 destroyed.
+[0m[0m[1m[32m
+Outputs:
+
+[0mapplication_insights_instrumentation_key = <sensitive>
+application_insights_name = "appi-demo-abc123"
+deployment_summary = {
+  "location" = "westus2"
+  "resource_group" = "rg-demo-app-abc123"
+  "resources" = {
+    "app_service_plan" = "asp-demo-abc123"
+    "application_insights" = "appi-demo-abc123"
+    "key_vault" = "kv-demo-abc123"
+    "postgresql_database" = "demoapp"
+    "postgresql_server" = "psql-demo-abc123"
+    "storage_account" = "stabc123demo"
+    "web_app" = "app-demo-abc123"
+  }
+}
+key_vault_name = "kv-demo-abc123"
+postgresql_database_name = "demoapp"
+postgresql_fqdn = "psql-demo-abc123.postgres.database.azure.com"
+postgresql_server_name = "psql-demo-abc123"
+resource_group_id = "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg-demo-app-abc123"
+resource_group_name = "rg-demo-app-abc123"
+storage_account_name = "stabc123demo"
+web_app_name = "app-demo-abc123"
+web_app_url = "https://app-demo-abc123.azurewebsites.net"
+DEPLOYMENT_END_TIME=2025-01-15T10:05:41Z 

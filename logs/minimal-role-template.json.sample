@@ -1,0 +1,24 @@
+{
+  "Name": "Terraform Demo App Deployer - Generated",
+  "Description": "Minimal permissions for demo app deployment - Generated from activity logs on Mon Jan 15 10:15:43 EST 2025",
+  "Actions": [
+    "Microsoft.Authorization/policies/audit/action",
+    "Microsoft.DBforPostgreSQL/flexibleServers/databases/write",
+    "Microsoft.DBforPostgreSQL/flexibleServers/firewallRules/write",
+    "Microsoft.DBforPostgreSQL/flexibleServers/write",
+    "Microsoft.Insights/components/currentbillingfeatures/write",
+    "Microsoft.Insights/components/write",
+    "Microsoft.Resources/subscriptions/resourcegroups/write",
+    "Microsoft.Storage/storageAccounts/listKeys/action",
+    "Microsoft.Storage/storageAccounts/write",
+    "Microsoft.Web/serverFarms/write",
+    "Microsoft.Web/sites/config/write",
+    "Microsoft.Web/sites/write"
+  ],
+  "NotActions": [],
+  "DataActions": [],
+  "NotDataActions": [],
+  "AssignableScopes": [
+    "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+  ]
+} 
