@@ -1,0 +1,8 @@
+{
+  "workspace_id": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+  "workspace_name": "law-policy-analysis-XXXXXX",
+  "resource_group": "rg-logging-XXXXXX",
+  "subscription_id": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+  "tenant_id": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+  "deployed_at": "2024-01-01T00:00:00Z"
+} 

@@ -1,0 +1,99 @@
+// Terraform-Specific Analysis Queries
+// These queries focus on Terraform deployment patterns and resource lifecycle
+
+// Query 1: Terraform deployment timeline
+AzureActivity
+| where Caller contains "{service-principal-id}"
+| where ActivityStatusValue == "Success"
+| where OperationName contains "write" or OperationName contains "create" or OperationName contains "delete"
+| extend DeploymentPhase = case(
+    OperationName contains "Microsoft.Resources/deployments", "Deployment",
+    OperationName contains "Microsoft.Resources/resourceGroups", "ResourceGroup",
+    OperationName contains "Microsoft.Web", "WebApp",
+    OperationName contains "Microsoft.DBforPostgreSQL", "Database",
+    OperationName contains "Microsoft.Storage", "Storage",
+    OperationName contains "Microsoft.KeyVault", "KeyVault",
+    OperationName contains "Microsoft.Insights", "Monitoring",
+    "Other"
+)
+| summarize count() by DeploymentPhase, bin(TimeGenerated, 1m)
+| order by TimeGenerated asc
+
+// Query 2: Resource creation sequence
+AzureActivity
+| where Caller contains "{service-principal-id}"
+| where ActivityStatusValue == "Success"
+| where OperationName contains "write" or OperationName contains "create"
+| extend ResourceType = case(
+    Resource contains "resourceGroups", "ResourceGroup",
+    Resource contains "serverfarms", "AppServicePlan", 
+    Resource contains "sites", "WebApp",
+    Resource contains "flexibleServers", "PostgreSQL",
+    Resource contains "storageAccounts", "StorageAccount",
+    Resource contains "vaults", "KeyVault",
+    Resource contains "components", "ApplicationInsights",
+    "Other"
+)
+| project TimeGenerated, ResourceType, Resource, OperationName
+| order by TimeGenerated asc
+
+// Query 3: Permission requirements by resource type
+AzureActivity
+| where Caller contains "{service-principal-id}"
+| where ActivityStatusValue == "Success"
+| extend ResourceProvider = split(OperationName, "/")[0]
+| extend ResourceType = case(
+    OperationName contains "Microsoft.Web/serverfarms", "AppServicePlan",
+    OperationName contains "Microsoft.Web/sites", "WebApp",
+    OperationName contains "Microsoft.DBforPostgreSQL", "PostgreSQL",
+    OperationName contains "Microsoft.Storage/storageAccounts", "StorageAccount",
+    OperationName contains "Microsoft.KeyVault/vaults", "KeyVault",
+    OperationName contains "Microsoft.Insights/components", "ApplicationInsights",
+    OperationName contains "Microsoft.Resources", "Resources",
+    "Other"
+)
+| summarize 
+    RequiredPermissions = make_set(OperationName),
+    PermissionCount = dcount(OperationName)
+    by ResourceType
+| order by PermissionCount desc
+
+// Query 4: Dependency analysis - what gets created first
+AzureActivity
+| where Caller contains "{service-principal-id}"
+| where ActivityStatusValue == "Success"
+| where OperationName contains "write" or OperationName contains "create"
+| extend ResourceProvider = split(OperationName, "/")[0]
+| summarize 
+    FirstCreated = min(TimeGenerated),
+    LastCreated = max(TimeGenerated),
+    CreationCount = count()
+    by ResourceProvider
+| extend CreationOrder = row_number(1, FirstCreated asc)
+| order by CreationOrder asc
+
+// Query 5: Read vs Write operations breakdown
+AzureActivity
+| where Caller contains "{service-principal-id}"
+| where ActivityStatusValue == "Success"
+| extend OperationType = case(
+    OperationName contains "read", "Read",
+    OperationName contains "write", "Write", 
+    OperationName contains "create", "Create",
+    OperationName contains "delete", "Delete",
+    OperationName contains "list", "List",
+    "Other"
+)
+| summarize count() by OperationType, split(OperationName, "/")[0]
+| order by count_ desc
+
+// Query 6: Minimal role definition generator
+AzureActivity
+| where Caller contains "{service-principal-id}"
+| where ActivityStatusValue == "Success"
+| extend Permission = strcat(split(OperationName, "/")[0], "/", split(OperationName, "/")[1])
+| where Permission !startswith "Microsoft.Authorization"  // Exclude auth operations
+| summarize count() by Permission
+| where count_ > 0
+| project Permission
+| order by Permission asc 

@@ -1,0 +1,68 @@
+// Azure RBAC POC - Permission Analysis Queries
+// These KQL queries analyze activity logs to identify required permissions
+
+// Query 1: All activities by service principal (replace {service-principal-id} with actual ID)
+// Usage: Replace the Caller value with your service principal's object ID
+AzureActivity
+| where Caller contains "{service-principal-id}"
+| where ActivityStatusValue == "Success"
+| summarize count() by OperationName, ResourceProvider, ResourceType
+| order by count_ desc
+
+// Query 2: Detailed permission analysis with resource information
+AzureActivity
+| where Caller contains "{service-principal-id}"
+| where ActivityStatusValue == "Success"
+| extend ResourceProviderParsed = split(OperationName, "/")[0]
+| extend ActionParsed = strcat(split(OperationName, "/")[0], "/", split(OperationName, "/")[1])
+| summarize 
+    Count = count(),
+    Resources = make_set(Resource),
+    ResourceGroups = make_set(ResourceGroup),
+    FirstSeen = min(TimeGenerated),
+    LastSeen = max(TimeGenerated)
+    by OperationName, ResourceProviderParsed, ActionParsed
+| order by Count desc
+
+// Query 3: Time-based analysis for deployment windows
+AzureActivity
+| where Caller contains "{service-principal-id}"
+| where ActivityStatusValue == "Success"
+| where TimeGenerated >= datetime({start-time}) and TimeGenerated <= datetime({end-time})
+| summarize count() by OperationName, bin(TimeGenerated, 5m)
+| order by TimeGenerated asc
+
+// Query 4: Failed operations analysis
+AzureActivity
+| where Caller contains "{service-principal-id}"
+| where ActivityStatusValue == "Failed"
+| summarize 
+    Count = count(),
+    ErrorMessages = make_set(ActivitySubstatusValue),
+    Resources = make_set(Resource)
+    by OperationName
+| order by Count desc
+
+// Query 5: Resource provider breakdown
+AzureActivity
+| where Caller contains "{service-principal-id}"
+| where ActivityStatusValue == "Success"
+| extend ResourceProvider = split(OperationName, "/")[0]
+| summarize 
+    OperationCount = count(),
+    UniqueOperations = dcount(OperationName),
+    Operations = make_set(OperationName)
+    by ResourceProvider
+| order by OperationCount desc
+
+// Query 6: Minimal permissions generator (for custom role creation)
+AzureActivity
+| where Caller contains "{service-principal-id}"
+| where ActivityStatusValue == "Success"
+| extend ResourceProvider = split(OperationName, "/")[0]
+| extend Action = strcat(split(OperationName, "/")[0], "/", split(OperationName, "/")[1])
+| where Action !contains "read" or Action contains "Microsoft.Resources"  // Include reads for Resources provider
+| summarize count() by Action
+| where count_ > 0
+| project Permission = Action
+| order by Permission asc 

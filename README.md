@@ -2,6 +2,21 @@
 
 This project demonstrates how to reduce Azure RBAC permissions for Terraform deployments by analyzing actual usage patterns and generating minimal custom roles.
 
+- [Azure RBAC Scope Reduction - POC](#azure-rbac-scope-reduction---poc)
+  - [Overview](#overview)
+  - [Project Structure](#project-structure)
+  - [Demo Application](#demo-application)
+  - [Prerequisites](#prerequisites)
+  - [Quick Start](#quick-start)
+    - [1. Azure Setup](#1-azure-setup)
+    - [2. Configure Terraform Backend](#2-configure-terraform-backend)
+    - [3. Deploy Demo Application](#3-deploy-demo-application)
+  - [Logging Setup](#logging-setup)
+    - [Deploy Logging Infrastructure](#deploy-logging-infrastructure)
+    - [Analyze Permissions](#analyze-permissions)
+    - [Available Analysis Queries](#available-analysis-queries)
+  - [Security Benefits](#security-benefits)
+
 ## Overview
 
 The goal is to move from broad permissions (like Contributor) to minimal, scoped permissions by:
@@ -80,6 +95,45 @@ terraform init
 terraform plan
 terraform apply
 ```
+
+## Logging Setup
+
+Before analyzing permissions, establish comprehensive activity logging to capture all Azure operations:
+
+### Deploy Logging Infrastructure
+
+```bash
+# Install required Azure CLI extensions
+./scripts/install-az-extensions.sh
+
+# Deploy Log Analytics workspace and diagnostic settings
+./scripts/deploy-logging.sh
+
+# Validate the setup
+./scripts/validate-logging.sh
+```
+
+### Analyze Permissions
+
+After deploying your demo application, wait 5-10 minutes for logs to populate, then analyze:
+
+```bash
+# Query permissions used by your service principal
+./scripts/query-logs.sh -s YOUR_SERVICE_PRINCIPAL_ID
+
+# Use custom queries for specific analysis
+./scripts/query-logs.sh -q terraform-specific.kql -s YOUR_SERVICE_PRINCIPAL_ID
+
+# Export results for further analysis
+./scripts/query-logs.sh -s YOUR_SERVICE_PRINCIPAL_ID -o json -f results.json
+```
+
+### Available Analysis Queries
+
+- **`permission-analysis.kql`** - General permission usage patterns
+- **`terraform-specific.kql`** - Terraform deployment-specific operations
+
+**Cost**: Logging infrastructure costs ~$3-6/month (Log Analytics + Storage)
 
 ## Security Benefits
 

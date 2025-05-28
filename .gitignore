@@ -6,6 +6,11 @@
 .env.*
 *.env
 
+# Configuration files with sensitive data
+config/logging-config.json
+config/*.json
+!config/*.json.example
+
 # Terraform files
 *.tfstate
 *.tfstate.*
