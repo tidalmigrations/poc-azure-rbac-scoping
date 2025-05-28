@@ -1,3 +1,5 @@
+# Provided by Tidal <support@tidalcloud.com>
+
 variable "location" {
   description = "The Azure region where logging resources will be created"
   type        = string

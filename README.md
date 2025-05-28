@@ -188,3 +188,9 @@ The project supports flexible configuration loading with automatic variable mapp
 - **Compliance**: Meet security frameworks requiring minimal permissions
 - **Auditability**: Clear documentation of why each permission is needed
 - **Cost Optimization**: Reduced monitoring and compliance overhead
+
+---
+
+## Attribution
+
+Provided by Tidal <support@tidalcloud.com>

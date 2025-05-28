@@ -1,4 +1,5 @@
 #!/bin/bash
+# Provided by Tidal <support@tidalcloud.com>
 
 # Azure RBAC POC - Deploy Logging Infrastructure
 # This script deploys the Log Analytics workspace and diagnostic settings

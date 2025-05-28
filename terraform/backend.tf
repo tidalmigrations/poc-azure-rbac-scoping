@@ -1,3 +1,5 @@
+# Provided by Tidal <support@tidalcloud.com>
+
 terraform {
   backend "azurerm" {
     resource_group_name  = "rg-rbac-poc"

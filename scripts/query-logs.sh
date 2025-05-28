@@ -1,4 +1,5 @@
 #!/bin/bash
+# Provided by Tidal <support@tidalcloud.com>
 
 # Azure RBAC POC - Query Activity Logs
 # This script runs KQL queries against the Log Analytics workspace

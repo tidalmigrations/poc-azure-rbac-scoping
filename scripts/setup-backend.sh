@@ -1,4 +1,5 @@
 #!/bin/bash
+# Provided by Tidal <support@tidalcloud.com>
 
 # Azure RBAC POC - Terraform Backend Setup
 # This script creates an Azure Storage Account to store Terraform state files

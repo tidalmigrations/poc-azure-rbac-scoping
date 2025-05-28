@@ -1,3 +1,5 @@
+# Provided by Tidal <support@tidalcloud.com>
+
 # Outputs for the demo application
 # These will be used for logging configuration in later phases
 

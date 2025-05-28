@@ -1,4 +1,5 @@
 #!/bin/bash
+# Provided by Tidal <support@tidalcloud.com>
 
 # Script to quickly switch Azure regions in terraform.tfvars
 # Usage: ./switch-region.sh "West US 2"

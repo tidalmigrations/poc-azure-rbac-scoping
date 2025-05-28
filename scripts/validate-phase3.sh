@@ -1,4 +1,5 @@
 #!/bin/bash
+# Provided by Tidal <support@tidalcloud.com>
 
 # Azure RBAC POC - Phase 3 Validation Script
 # Validates that Phase 3 deployment and monitoring completed successfully

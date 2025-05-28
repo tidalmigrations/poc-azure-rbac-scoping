@@ -1,4 +1,5 @@
 #!/bin/bash
+# Provided by Tidal <support@tidalcloud.com>
 
 # Azure RBAC POC - Install Required Azure CLI Extensions
 # This script installs the necessary Azure CLI extensions for the project

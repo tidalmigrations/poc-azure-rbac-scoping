@@ -1,4 +1,5 @@
 #!/bin/bash
+# Provided by Tidal <support@tidalcloud.com>
 
 # Azure RBAC POC - Extract Permissions Script
 # Phase 3: Extract permissions used during deployment from activity logs

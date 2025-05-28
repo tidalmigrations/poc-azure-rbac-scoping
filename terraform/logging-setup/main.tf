@@ -1,3 +1,5 @@
+# Provided by Tidal <support@tidalcloud.com>
+
 # Azure RBAC POC - Logging Infrastructure
 # This configuration sets up comprehensive activity logging and monitoring
 

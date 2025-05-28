@@ -1,4 +1,5 @@
 #!/bin/bash
+# Provided by Tidal <support@tidalcloud.com>
 
 # Script to check App Service Plan quota availability across different Azure regions
 # This helps identify which regions have available quota for your subscription

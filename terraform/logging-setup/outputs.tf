@@ -1,3 +1,5 @@
+# Provided by Tidal <support@tidalcloud.com>
+
 # Outputs for the logging infrastructure
 # These will be used by scripts to query and analyze activity logs
 

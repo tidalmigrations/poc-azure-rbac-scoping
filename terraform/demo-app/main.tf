@@ -1,3 +1,5 @@
+# Provided by Tidal <support@tidalcloud.com>
+
 # Azure RBAC POC - Demo Application
 # This configuration creates a simple web application with database to generate diverse permissions
 

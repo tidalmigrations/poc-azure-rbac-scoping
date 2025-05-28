@@ -1,4 +1,5 @@
 #!/bin/bash
+# Provided by Tidal <support@tidalcloud.com>
 
 # Azure RBAC POC - Deploy and Monitor Script
 # Phase 3: Baseline Deployment & Capture

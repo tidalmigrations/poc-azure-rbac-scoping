@@ -1,4 +1,5 @@
 #!/bin/bash
+# Provided by Tidal <support@tidalcloud.com>
 
 # Azure RBAC POC - Setup Validation Script
 # This script validates that Phase 1 setup is working correctly

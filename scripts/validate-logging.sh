@@ -1,4 +1,5 @@
 #!/bin/bash
+# Provided by Tidal <support@tidalcloud.com>
 
 # Azure RBAC POC - Validate Logging Setup
 # This script validates that the logging infrastructure is working correctly
